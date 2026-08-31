@@ -99,14 +99,18 @@ html, body {
   line-height: 1;
 }
 
+/* Logo BanCoppel: 3 círculos amarillos (1 grande + 2 chicos del mismo tamaño)
+   Ancho total ≈ 15 + 5 + 9 + 5 + 9 + 5(gap) ≈ 48px */
 .logo-bancoppel::before {
   content: "";
   display: inline-block;
-  width: 22px;
+  width: 48px;
   height: 22px;
-  border-radius: 50%;
-  background: var(--amarillo);
   flex-shrink: 0;
+  background:
+    radial-gradient(circle, var(--amarillo) 7.5px, transparent 8px) 0 50% / 15px 15px no-repeat,
+    radial-gradient(circle, var(--amarillo) 4.5px, transparent 5px) 17px 50% / 9px 9px no-repeat,
+    radial-gradient(circle, var(--amarillo) 4.5px, transparent 5px) 28px 50% / 9px 9px no-repeat;
 }
 
 .logo-afore {
@@ -121,14 +125,17 @@ html, body {
   line-height: 1;
 }
 
+/* Logo Afore Coppel: mismo patrón 3 puntos (1 grande + 2 chicos) más pequeño */
 .logo-afore::before {
   content: "";
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--amarillo);
+  width: 48px;
+  height: 18px;
   flex-shrink: 0;
+  background:
+    radial-gradient(circle, var(--amarillo) 7.5px, transparent 8px) 0 50% / 15px 15px no-repeat,
+    radial-gradient(circle, var(--amarillo) 4.5px, transparent 5px) 17px 50% / 9px 9px no-repeat,
+    radial-gradient(circle, var(--amarillo) 4.5px, transparent 5px) 28px 50% / 9px 9px no-repeat;
 }
 
 .accion-estacion {
