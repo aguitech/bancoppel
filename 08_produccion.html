@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producción · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="kiosk">
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+      <div class="accion-estacion">
+        <span class="icon">⭐</span>
+        <span>ACCIÓN<br>ESTACIÓN 4</span>
+      </div>
+    </header>
+
+    <main class="main" style="text-align: center;">
+      <div class="badge-escena">🎬 PRODUCCIÓN</div>
+
+      <h1 class="titulo-principal">
+        TU HISTORIA ESTÁ LISTA<br>
+        PARA CONVERTIRSE EN <span class="yellow">PELÍCULA</span>
+      </h1>
+      <div style="width: 80px; height: 3px; background: var(--amarillo); margin: 0 auto 1.5rem;"></div>
+
+      <p class="subtitulo">
+        Tus escenas y decisiones ya están registradas.<br>
+        <strong>Solo falta dar la orden final.</strong>
+      </p>
+
+      <!-- CARDS DE CONFIRMACIÓN -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 800px; margin: 2rem auto;">
+        <div class="confirm-card">
+          <div class="confirm-icon">🎬</div>
+          <p class="confirm-label">ESCENAS</p>
+          <div class="confirm-check">✓</div>
+        </div>
+        <div class="confirm-card">
+          <div class="confirm-icon">📋</div>
+          <p class="confirm-label">DECISIONES</p>
+          <div class="confirm-check">✓</div>
+        </div>
+        <div class="confirm-card">
+          <div class="confirm-icon">⭐</div>
+          <p class="confirm-label">HISTORIA</p>
+          <div class="confirm-check">✓</div>
+        </div>
+      </div>
+
+      <a href="09_pelicula_lista.html" class="btn btn-primary btn-arrow mt-2">PRODUCIR MI PELÍCULA</a>
+
+      <div style="background: #EFF6FF; border-radius: var(--radius-md); padding: 1rem 1.5rem; max-width: 500px; margin: 1.5rem auto 0; display: flex; gap: 0.75rem; align-items: center;">
+        <div style="width: 32px; height: 32px; background: var(--azul-bancoppel); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; flex-shrink: 0;">i</div>
+        <p style="font-size: 0.9rem; color: var(--azul-oscuro); text-align: left;"><strong>Al producir tu película</strong><br>ya no podrás realizar cambios.</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="shield-icon">🛡</div>
+        <div>Tu información está protegida.<br><small>Consulta nuestro Aviso de privacidad.</small></div>
+      </div>
+      <div class="stepper">
+        <div class="stepper-circles">
+          <div class="step-circle done">1</div>
+          <div class="step-line done"></div>
+          <div class="step-circle done">2</div>
+          <div class="step-line done"></div>
+          <div class="step-circle active">3</div>
+        </div>
+        <div class="stepper-label">PRODUCCIÓN 4 DE 5</div>
+      </div>
+      <div class="footer-tip">
+        <div class="bulb-icon">💡</div>
+        <div>
+          <div class="tip-title">TIP DEL DIRECTOR</div>
+          <small>Confirma y da luz verde a tu historia.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <style>
+    .confirm-card {
+      background: white; border: 1px solid var(--gris-claro);
+      border-radius: var(--radius-md); padding: 2rem 1rem;
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      position: relative;
+    }
+    .confirm-icon { font-size: 2.5rem; background: var(--gris-bg); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .confirm-label { font-weight: 900; color: var(--azul-oscuro); letter-spacing: 0.05em; font-size: 0.9rem; }
+    .confirm-check {
+      position: absolute; top: 10px; right: 10px;
+      width: 28px; height: 28px; background: var(--verde-exito); color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1rem;
+    }
+  </style>
+</body>
+</html>

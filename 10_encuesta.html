@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Gracias por ser protagonista! · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .kiosk {
+      background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-bancoppel) 100%);
+      min-height: 100vh;
+    }
+    .header { background: transparent; border-bottom: none; }
+    .footer { background: transparent; border-top: 1px solid rgba(255,255,255,0.1); }
+
+    .survey-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: var(--shadow-lg);
+      margin-top: 1rem;
+    }
+
+    .question-block {
+      background: var(--gris-bg);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .question-header {
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+
+    .question-num {
+      width: 28px; height: 28px; background: var(--amarillo); color: var(--azul-oscuro);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 0.9rem; flex-shrink: 0;
+    }
+
+    .stars-rating, .faces-rating, .nps-rating {
+      display: flex; justify-content: space-between; gap: 0.5rem;
+      padding: 0.5rem 0;
+    }
+
+    .star-btn, .face-btn, .nps-btn {
+      background: white; border: 2px solid var(--gris-claro); border-radius: var(--radius-sm);
+      padding: 0.5rem; cursor: pointer; min-width: 60px; text-align: center;
+      transition: all 0.15s; font-size: 0.7rem; color: var(--gris-oscuro); font-weight: 600;
+    }
+    .star-btn:hover, .face-btn:hover, .nps-btn:hover {
+      border-color: var(--amarillo); background: #FFFBEB;
+    }
+    .star-btn.selected, .face-btn.selected, .nps-btn.selected {
+      border-color: var(--amarillo); background: var(--amarillo); color: var(--azul-oscuro);
+    }
+    .star-icon { font-size: 2rem; color: var(--amarillo); line-height: 1; }
+    .face-icon { font-size: 2rem; line-height: 1; }
+
+    .chips-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;
+    }
+
+    .chip {
+      background: white; border: 2px solid var(--gris-claro); border-radius: var(--radius-md);
+      padding: 1rem 0.5rem; cursor: pointer; text-align: center; transition: all 0.15s;
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    }
+    .chip:hover { border-color: var(--azul-bancoppel); }
+    .chip.selected { background: var(--azul-bancoppel); color: white; border-color: var(--azul-bancoppel); }
+    .chip-icon { font-size: 1.5rem; }
+    .chip-label { font-size: 0.75rem; font-weight: 600; }
+
+    textarea {
+      width: 100%; padding: 1rem; border: 2px solid var(--gris-claro);
+      border-radius: var(--radius-md); font-family: inherit; font-size: 1rem;
+      resize: vertical; min-height: 80px;
+    }
+    textarea:focus { outline: none; border-color: var(--azul-bancoppel); }
+  </style>
+</head>
+<body>
+  <div class="kiosk">
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+    </header>
+
+    <main class="main" style="padding-bottom: 0;">
+      <div style="text-align: center; margin-bottom: 1rem;">
+        <h1 style="color: white; font-size: 2.5rem; font-weight: 900; max-width: 700px; margin: 0 auto;">
+          ¡Gracias por ser<br>protagonista de tu historia!
+        </h1>
+        <div style="width: 80px; height: 3px; background: var(--amarillo); margin: 1rem auto 1rem;"></div>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.05rem; max-width: 600px; margin: 0 auto;">
+          Antes de cerrar tu película,<br>cuéntanos sobre tu experiencia.
+        </p>
+      </div>
+
+      <div class="survey-card">
+        <form id="survey-form">
+
+          <!-- Q1: Estrellas -->
+          <div class="question-block">
+            <div class="question-header">
+              <div class="question-num">1</div>
+              <h3 style="color: var(--azul-oscuro); font-size: 1rem; font-weight: 800;">¿Cómo calificarías tu experiencia hoy?</h3>
+            </div>
+            <div class="stars-rating">
+              <button type="button" class="star-btn" data-q="1" data-v="1"><div class="star-icon">★</div>Muy mala</button>
+              <button type="button" class="star-btn" data-q="1" data-v="2"><div class="star-icon">★</div>Mala</button>
+              <button type="button" class="star-btn" data-q="1" data-v="3"><div class="star-icon">★</div>Regular</button>
+              <button type="button" class="star-btn" data-q="1" data-v="4"><div class="star-icon">★</div>Buena</button>
+              <button type="button" class="star-btn" data-q="1" data-v="5"><div class="star-icon">★</div>Excelente</button>
+            </div>
+          </div>
+
+          <!-- Q2: Emojis -->
+          <div class="question-block">
+            <div class="question-header">
+              <div class="question-num">2</div>
+              <h3 style="color: var(--azul-oscuro); font-size: 1rem; font-weight: 800;">¿Qué tanto aprendiste sobre finanzas personales hoy?</h3>
+            </div>
+            <div class="faces-rating">
+              <button type="button" class="face-btn" data-q="2" data-v="1"><div class="face-icon">😞</div>Nada</button>
+              <button type="button" class="face-btn" data-q="2" data-v="2"><div class="face-icon">🙁</div>Poco</button>
+              <button type="button" class="face-btn" data-q="2" data-v="3"><div class="face-icon">😐</div>Regular</button>
+              <button type="button" class="face-btn" data-q="2" data-v="4"><div class="face-icon">🙂</div>Bien</button>
+              <button type="button" class="face-btn" data-q="2" data-v="5"><div class="face-icon">😄</div>Mucho</button>
+            </div>
+          </div>
+
+          <!-- Q3: Chips -->
+          <div class="question-block">
+            <div class="question-header">
+              <div class="question-num">3</div>
+              <h3 style="color: var(--azul-oscuro); font-size: 1rem; font-weight: 800;">¿Qué parte de la experiencia te fue más útil?</h3>
+            </div>
+            <div class="chips-grid">
+              <button type="button" class="chip" data-q="3"><div class="chip-icon">🎬</div><div class="chip-label">Consejos financieros</div></button>
+              <button type="button" class="chip" data-q="3"><div class="chip-icon">📹</div><div class="chip-label">Grabar mi película</div></button>
+              <button type="button" class="chip" data-q="3"><div class="chip-icon">💡</div><div class="chip-label">Tomar decisiones</div></button>
+              <button type="button" class="chip" data-q="3"><div class="chip-icon">🏆</div><div class="chip-label">Mi póster</div></button>
+            </div>
+          </div>
+
+          <!-- Q4: NPS -->
+          <div class="question-block">
+            <div class="question-header">
+              <div class="question-num">4</div>
+              <h3 style="color: var(--azul-oscuro); font-size: 1rem; font-weight: 800;">¿Qué tan probable es que recomiendes esta experiencia?</h3>
+            </div>
+            <div class="nps-rating">
+              <button type="button" class="nps-btn" data-q="4" data-v="0">0</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="1">1</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="2">2</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="3">3</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="4">4</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="5">5</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="6">6</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="7">7</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="8">8</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="9">9</button>
+              <button type="button" class="nps-btn" data-q="4" data-v="10">10</button>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--gris-oscuro); margin-top: 0.5rem;">
+              <span>Nada probable</span>
+              <span>Muy probable</span>
+            </div>
+          </div>
+
+          <!-- Q5: Comentario -->
+          <div class="question-block">
+            <div class="question-header">
+              <div class="question-num">5</div>
+              <h3 style="color: var(--azul-oscuro); font-size: 1rem; font-weight: 800;">¿Te gustaría compartir algo más con nosotros?</h3>
+            </div>
+            <textarea placeholder="Escribe aquí tu comentario..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-arrow-right full" style="width: 100%; margin-top: 1rem;">ENVIAR RESPUESTA</button>
+        </form>
+
+        <p style="text-align: center; color: var(--gris-oscuro); font-size: 0.85rem; margin-top: 1.5rem;">
+          Tus respuestas nos ayudan a seguir creando mejores experiencias.<br>
+          <strong style="color: var(--amarillo);">♥ ¡Gracias!</strong>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Selección única por pregunta
+    document.querySelectorAll('.star-btn, .face-btn, .nps-btn, .chip').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const q = btn.dataset.q;
+        document.querySelectorAll(`[data-q="${q}"]`).forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+
+    // Submit
+    document.getElementById('survey-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('¡Gracias por tus respuestas! ♥');
+    });
+  </script>
+</body>
+</html>

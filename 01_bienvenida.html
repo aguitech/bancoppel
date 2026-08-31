@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="kiosk">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+      <div class="accion-estacion">
+        <span class="icon">⭐</span>
+        <span>ACCIÓN<br>ESTACIÓN 1</span>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main" style="justify-content: center; gap: 2rem;">
+      <div class="badge-escena">🎬 BIENVENIDA</div>
+
+      <h1 class="titulo-principal">
+        CREA <span class="yellow">TU PROPIA</span><br>
+        PELÍCULA
+      </h1>
+
+      <p class="subtitulo">
+        Toma decisiones financieras que cambiarán el rumbo de tu historia.<br>
+        3 decisiones, 4 estaciones, 1 final épico.
+      </p>
+
+      <!-- CARRUSEL DE ESTACIONES -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 900px; margin: 1rem 0;">
+        <div class="card-estacion">
+          <div class="card-numero">01</div>
+          <div class="card-titulo">CASTING</div>
+        </div>
+        <div class="card-estacion">
+          <div class="card-numero">02</div>
+          <div class="card-titulo">FORO</div>
+        </div>
+        <div class="card-estacion">
+          <div class="card-numero">03</div>
+          <div class="card-titulo">EDITA</div>
+        </div>
+        <div class="card-estacion">
+          <div class="card-numero">04</div>
+          <div class="card-titulo">PRODUCCIÓN</div>
+        </div>
+      </div>
+
+      <a href="02_decision1.html" class="btn btn-primary btn-arrow mt-2">COMENZAR MI HISTORIA</a>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="shield-icon">🛡</div>
+        <div>Tu información está protegida.<br><small>Consulta nuestro Aviso de privacidad.</small></div>
+      </div>
+      <div class="stepper">
+        <div class="stepper-circles">
+          <div class="step-circle active">1</div>
+          <div class="step-line"></div>
+          <div class="step-circle">2</div>
+          <div class="step-line"></div>
+          <div class="step-circle">3</div>
+        </div>
+        <div class="stepper-label">BIENVENIDA</div>
+      </div>
+      <div class="footer-tip">
+        <div class="bulb-icon">💡</div>
+        <div>
+          <div class="tip-title">TIP DEL DIRECTOR</div>
+          <small>Cada decisión que tomes construye tu historia.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <style>
+    .card-estacion {
+      background: white;
+      border: 2px solid var(--gris-claro);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .card-estacion:hover {
+      border-color: var(--amarillo);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .card-numero {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--amarillo);
+      line-height: 1;
+    }
+    .card-titulo {
+      font-weight: 800;
+      color: var(--azul-bancoppel);
+      margin-top: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decisión 3 de 3 · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="kiosk">
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+      <div class="accion-estacion">
+        <span class="icon">⭐</span>
+        <span>ACCIÓN<br>ESTACIÓN 3</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="badge-escena">🎬 ESCENA 03 DE 03</div>
+
+      <h1 class="titulo-principal">METAS</h1>
+      <div style="width: 80px; height: 3px; background: var(--amarillo); margin: 0 auto 1.5rem;"></div>
+
+      <p class="subtitulo">
+        <strong>Tu siguiente gran meta.</strong><br>
+        ¿Cómo planeas alcanzarla financieramente?
+      </p>
+
+      <h2 style="color: var(--azul-oscuro); font-size: 1.8rem; font-weight: 900; margin: 1rem 0 2rem;">¿QUÉ DECIDES?</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; width: 100%;">
+        <a href="07_decision3_resultado.html?op=A" class="opcion-card">
+          <div class="opcion-corner">A</div>
+          <div class="opcion-icon">🏠</div>
+          <div class="opcion-texto">CASA<br>PROPIA</div>
+        </a>
+        <a href="07_decision3_resultado.html?op=B" class="opcion-card">
+          <div class="opcion-corner">B</div>
+          <div class="opcion-icon">🎓</div>
+          <div class="opcion-texto">EDUCACIÓN</div>
+        </a>
+        <a href="07_decision3_resultado.html?op=C" class="opcion-card">
+          <div class="opcion-corner">C</div>
+          <div class="opcion-icon">✈️</div>
+          <div class="opcion-texto">VIAJE O<br>NEGOCIO</div>
+        </a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="shield-icon">🛡</div>
+        <div>Tu información está protegida.<br><small>Consulta nuestro Aviso de privacidad.</small></div>
+      </div>
+      <div class="stepper">
+        <div class="stepper-circles">
+          <div class="step-circle done">1</div>
+          <div class="step-line done"></div>
+          <div class="step-circle active">2</div>
+          <div class="step-line"></div>
+          <div class="step-circle">3</div>
+        </div>
+        <div class="stepper-label">DECISIÓN 3 DE 3</div>
+      </div>
+      <div class="footer-tip">
+        <div class="bulb-icon">💡</div>
+        <div>
+          <div class="tip-title">TIP DEL DIRECTOR</div>
+          <small>Cada decisión que tomes construye tu historia.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <style>
+    .opcion-card {
+      background: white; border: 2px solid var(--gris-claro);
+      border-radius: var(--radius-md); padding: 2.5rem 1rem 1.5rem;
+      text-align: center; transition: all 0.2s; position: relative;
+      text-decoration: none; color: inherit; display: block; min-height: 240px;
+    }
+    .opcion-card:hover { border-color: var(--amarillo); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .opcion-corner {
+      position: absolute; top: 0; left: 0; background: var(--amarillo); color: var(--azul-oscuro);
+      width: 60px; height: 60px; border-top-left-radius: var(--radius-md); border-bottom-right-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900;
+    }
+    .opcion-icon { font-size: 4rem; margin: 1rem 0; }
+    .opcion-texto { font-weight: 700; color: var(--azul-oscuro); letter-spacing: 0.05em; }
+  </style>
+</body>
+</html>
