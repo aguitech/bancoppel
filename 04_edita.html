@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estación 3 · Edita · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .edit-workspace {
+      display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;
+      max-width: 1100px; width: 100%; margin: 2rem 0;
+    }
+    .timeline {
+      background: var(--negro); border-radius: var(--radius-md);
+      padding: 1rem; color: white;
+    }
+    .timeline-screen {
+      background: linear-gradient(135deg, #2D3748, #1A202C);
+      border-radius: 8px; height: 280px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem; margin-bottom: 1rem;
+      border: 2px solid var(--azul-bancoppel);
+    }
+    .timeline-bar {
+      display: flex; gap: 4px; padding: 0.5rem 0;
+    }
+    .timeline-clip {
+      flex: 1; height: 50px; border-radius: 4px;
+      background: var(--azul-claro); position: relative;
+    }
+    .timeline-clip:nth-child(odd) { background: var(--amarillo); }
+    .timeline-playhead {
+      width: 3px; background: white; height: 50px;
+      position: relative; flex-shrink: 0;
+    }
+    .timeline-toolbar {
+      display: flex; gap: 1rem; margin-top: 1rem;
+      align-items: center; justify-content: center;
+    }
+    .tool-btn {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); color: white;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; border: none; font-size: 1rem;
+    }
+    .tool-btn.primary { background: var(--amarillo); color: var(--azul-oscuro); width: 50px; height: 50px; }
+
+    .edit-panel {
+      background: white; border: 1px solid var(--gris-claro);
+      border-radius: var(--radius-md); padding: 1.5rem;
+    }
+    .effect-card {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 0.75rem; border-radius: var(--radius-sm);
+      margin-bottom: 0.5rem; cursor: pointer;
+      transition: background 0.15s;
+    }
+    .effect-card:hover { background: var(--gris-bg); }
+    .effect-card.selected { background: #EFF6FF; border-left: 3px solid var(--azul-bancoppel); }
+    .effect-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: var(--gris-bg); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="kiosk">
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+      <div class="accion-estacion">
+        <span class="icon">⭐</span>
+        <span>ESTACIÓN<br>03 DE 04</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="badge-escena">🎬 ESTACIÓN 03 · EDITA</div>
+
+      <h1 class="titulo-principal">
+        EDITA TU <span class="yellow">PELÍCULA</span>
+      </h1>
+      <div style="width: 80px; height: 3px; background: var(--amarillo); margin: 0 auto 1.5rem;"></div>
+
+      <p class="subtitulo">
+        Agrega efectos, ajusta el audio y personaliza tu escena.
+      </p>
+
+      <div class="edit-workspace">
+        <!-- TIMELINE PRINCIPAL -->
+        <div class="timeline">
+          <div class="timeline-screen">🎞</div>
+          <div class="timeline-bar">
+            <div class="timeline-clip"></div>
+            <div class="timeline-clip"></div>
+            <div class="timeline-playhead"></div>
+            <div class="timeline-clip"></div>
+            <div class="timeline-clip"></div>
+            <div class="timeline-clip"></div>
+            <div class="timeline-clip"></div>
+          </div>
+          <div class="timeline-toolbar">
+            <button class="tool-btn">⏮</button>
+            <button class="tool-btn">⏯</button>
+            <button class="tool-btn primary">▶</button>
+            <button class="tool-btn">⏭</button>
+            <button class="tool-btn">🔊</button>
+          </div>
+        </div>
+
+        <!-- PANEL DE EFECTOS -->
+        <div class="edit-panel">
+          <p style="font-weight: 900; color: var(--azul-oscuro); font-size: 0.85rem; letter-spacing: 0.1em; margin-bottom: 1rem;">EFECTOS</p>
+
+          <div class="effect-card selected">
+            <div class="effect-icon">✨</div>
+            <div>
+              <p style="font-weight: 700; color: var(--azul-oscuro); font-size: 0.9rem;">Brillo dorado</p>
+              <p style="font-size: 0.75rem; color: var(--gris-oscuro);">Look cinematográfico</p>
+            </div>
+          </div>
+          <div class="effect-card">
+            <div class="effect-icon">🎵</div>
+            <div>
+              <p style="font-weight: 700; color: var(--azul-oscuro); font-size: 0.9rem;">Música épica</p>
+              <p style="font-size: 0.75rem; color: var(--gris-oscuro);">Banda sonora</p>
+            </div>
+          </div>
+          <div class="effect-card">
+            <div class="effect-icon">⭐</div>
+            <div>
+              <p style="font-weight: 700; color: var(--azul-oscuro); font-size: 0.9rem;">Stickers BanCoppel</p>
+              <p style="font-size: 0.75rem; color: var(--gris-oscuro);">3 estrellas amarillas</p>
+            </div>
+          </div>
+          <div class="effect-card">
+            <div class="effect-icon">📝</div>
+            <div>
+              <p style="font-weight: 700; color: var(--azul-oscuro); font-size: 0.9rem;">Texto personalizado</p>
+              <p style="font-size: 0.75rem; color: var(--gris-oscuro);">Tu nombre en créditos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="05_produccion_estacion.html" class="btn btn-primary btn-arrow mt-3">SIGUIENTE: PRODUCCIÓN</a>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="shield-icon">🛡</div>
+        <div>Tu información está protegida.<br><small>Consulta nuestro Aviso de privacidad.</small></div>
+      </div>
+      <div class="stepper">
+        <div class="stepper-circles">
+          <div class="step-circle done">1</div>
+          <div class="step-line done"></div>
+          <div class="step-circle done">2</div>
+          <div class="step-line done"></div>
+          <div class="step-circle active">3</div>
+          <div class="step-line"></div>
+          <div class="step-circle">4</div>
+        </div>
+        <div class="stepper-label">ESTACIÓN 03 · EDITA</div>
+      </div>
+      <div class="footer-tip">
+        <div class="bulb-icon">💡</div>
+        <div>
+          <div class="tip-title">TIP DEL DIRECTOR</div>
+          <small>Los efectos hacen tu historia única.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estación 2 · Foro · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .foro-sets {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;
+      max-width: 1100px; width: 100%; margin: 2rem 0;
+    }
+    .set-card {
+      background: white; border: 2px solid var(--gris-claro);
+      border-radius: var(--radius-md); padding: 2rem 1rem; text-align: center;
+      transition: all 0.2s; cursor: pointer;
+    }
+    .set-card:hover {
+      border-color: var(--amarillo); transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .set-azul { background: linear-gradient(180deg, white 60%, #87CEEB 100%); }
+    .set-verde { background: linear-gradient(180deg, white 60%, #90EE90 100%); }
+    .set-naranja { background: linear-gradient(180deg, white 60%, #FFB347 100%); }
+    .set-camera { font-size: 3rem; margin-bottom: 0.5rem; }
+    .set-name { font-weight: 900; color: var(--azul-oscuro); letter-spacing: 0.05em; }
+    .set-badge {
+      display: inline-block; background: var(--amarillo); color: var(--azul-oscuro);
+      padding: 0.25rem 0.75rem; border-radius: var(--radius-full);
+      font-size: 0.7rem; font-weight: 900; margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="kiosk">
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+      <div class="accion-estacion">
+        <span class="icon">⭐</span>
+        <span>ESTACIÓN<br>02 DE 04</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="badge-escena">🎬 ESTACIÓN 02 · FORO DE GRABACIÓN</div>
+
+      <h1 class="titulo-principal">
+        ELIGE TU <span class="yellow">SET</span>
+      </h1>
+      <div style="width: 80px; height: 3px; background: var(--amarillo); margin: 0 auto 1.5rem;"></div>
+
+      <p class="subtitulo">
+        <strong>3 sets disponibles.</strong> Selecciona el escenario donde<br>
+        grabarás tu escena cinematográfica.
+      </p>
+
+      <div class="foro-sets">
+        <div class="set-card set-azul">
+          <div class="set-camera">🎬</div>
+          <div class="set-name">SET 01</div>
+          <p style="font-size: 0.85rem; color: var(--gris-oscuro); margin-top: 0.5rem;">Fondo azul cinematográfico</p>
+          <span class="set-badge">★ POPULAR</span>
+        </div>
+        <div class="set-card set-verde">
+          <div class="set-camera">🎥</div>
+          <div class="set-name">SET 02</div>
+          <p style="font-size: 0.85rem; color: var(--gris-oscuro); margin-top: 0.5rem;">Fondo verde chromakey</p>
+          <span class="set-badge">EFECTOS</span>
+        </div>
+        <div class="set-card set-naranja">
+          <div class="set-camera">📽</div>
+          <div class="set-name">SET 03</div>
+          <p style="font-size: 0.85rem; color: var(--gris-oscuro); margin-top: 0.5rem;">Escenario urbano</p>
+          <span class="set-badge">NUEVO</span>
+        </div>
+      </div>
+
+      <div style="background: #EFF6FF; border-left: 4px solid var(--azul-bancoppel); border-radius: var(--radius-md); padding: 1rem 1.5rem; max-width: 700px; margin: 1.5rem auto;">
+        <p style="color: var(--azul-oscuro); font-weight: 700;">📸 Tu coach te guiará durante la grabación</p>
+        <p style="color: var(--gris-oscuro); font-size: 0.9rem; margin-top: 0.25rem;">
+          Sigue las instrucciones en pantalla para grabar tu escena con la mejor calidad.
+        </p>
+      </div>
+
+      <a href="04_edita.html" class="btn btn-primary btn-arrow mt-2">SIGUIENTE: EDITA</a>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="shield-icon">🛡</div>
+        <div>Tu información está protegida.<br><small>Consulta nuestro Aviso de privacidad.</small></div>
+      </div>
+      <div class="stepper">
+        <div class="stepper-circles">
+          <div class="step-circle done">1</div>
+          <div class="step-line done"></div>
+          <div class="step-circle active">2</div>
+          <div class="step-line"></div>
+          <div class="step-circle">3</div>
+          <div class="step-line"></div>
+          <div class="step-circle">4</div>
+        </div>
+        <div class="stepper-label">ESTACIÓN 02 · FORO</div>
+      </div>
+      <div class="footer-tip">
+        <div class="bulb-icon">💡</div>
+        <div>
+          <div class="tip-title">TIP DEL DIRECTOR</div>
+          <small>Cada decisión que tomes construye tu historia.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

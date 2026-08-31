@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estación 1 · Casting · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .estacion-hero {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+      max-width: 1100px; width: 100%; align-items: center;
+      background: white; border-radius: var(--radius-lg);
+      padding: 2rem; box-shadow: var(--shadow-md);
+    }
+    .estacion-hero-img {
+      background: linear-gradient(135deg, var(--azul-bancoppel), var(--azul-oscuro));
+      border-radius: var(--radius-md);
+      height: 360px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6rem; position: relative; overflow: hidden;
+    }
+    .estacion-hero-img::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 20% 30%, rgba(255,199,44,0.2), transparent 50%);
+    }
+    .ipads-row {
+      display: flex; gap: 1rem; margin-top: 1.5rem;
+      justify-content: center;
+    }
+    .ipad-mockup {
+      width: 80px; height: 110px;
+      background: white;
+      border: 3px solid var(--negro);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; box-shadow: var(--shadow-sm);
+    }
+    .feature-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+    .feature-list li {
+      padding: 0.5rem 0; padding-left: 2rem; position: relative;
+      color: var(--gris-oscuro); font-size: 1rem;
+    }
+    .feature-list li::before {
+      content: "🎬"; position: absolute; left: 0; top: 0.5rem;
+    }
+    .qr-box {
+      display: inline-flex; align-items: center; gap: 1rem;
+      background: var(--gris-bg); border-radius: var(--radius-md);
+      padding: 1rem 1.5rem; margin-top: 1rem;
+    }
+    .qr-image {
+      width: 60px; height: 60px;
+      background: conic-gradient(from 0deg, var(--azul-bancoppel) 0deg 30deg, white 30deg 60deg, var(--azul-bancoppel) 60deg 90deg, white 90deg 120deg, var(--azul-bancoppel) 120deg 150deg, white 150deg 180deg, var(--azul-bancoppel) 180deg 210deg, white 210deg 240deg, var(--azul-bancoppel) 240deg 270deg, white 270deg 300deg, var(--azul-bancoppel) 300deg 330deg, white 330deg 360deg);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="kiosk">
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+      <div class="accion-estacion">
+        <span class="icon">⭐</span>
+        <span>ESTACIÓN<br>01 DE 04</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="badge-escena">🎬 ESTACIÓN 01 · CASTING</div>
+
+      <h1 class="titulo-principal" style="text-align: left; font-size: 2.5rem;">
+        CREA TU PROPIA<br>
+        <span class="yellow">PELÍCULA</span>
+      </h1>
+
+      <div class="estacion-hero">
+        <!-- IZQUIERDA: Visual + iPads -->
+        <div>
+          <div class="estacion-hero-img">🎥</div>
+          <div class="ipads-row">
+            <div class="ipad-mockup">📱</div>
+            <div class="ipad-mockup">📱</div>
+            <div class="ipad-mockup">📱</div>
+          </div>
+        </div>
+
+        <!-- DERECHA: Información + QR -->
+        <div>
+          <p style="font-size: 1.05rem; color: var(--azul-oscuro); font-weight: 700; margin-bottom: 1rem; line-height: 1.4;">
+            <strong>Escanea el QR de la pantalla frente a ti</strong> y elige tu personaje para comenzar tu historia.
+          </p>
+
+          <ul class="feature-list">
+            <li>Elige el personaje que quieres interpretar</li>
+            <li>Tu historia inicia aquí</li>
+          </ul>
+
+          <div class="qr-box">
+            <div class="qr-image"></div>
+            <div>
+              <p style="font-weight: 900; color: var(--azul-oscuro); font-size: 0.9rem; letter-spacing: 0.05em;">ESCANÉAME</p>
+              <p style="font-size: 0.85rem; color: var(--gris-oscuro);">para elegir tu personaje</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="03_foro.html" class="btn btn-primary btn-arrow mt-3">SIGUIENTE: FORO DE GRABACIÓN</a>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="shield-icon">🛡</div>
+        <div>Tu información está protegida.<br><small>Consulta nuestro Aviso de privacidad.</small></div>
+      </div>
+      <div class="stepper">
+        <div class="stepper-circles">
+          <div class="step-circle active">1</div>
+          <div class="step-line"></div>
+          <div class="step-circle">2</div>
+          <div class="step-line"></div>
+          <div class="step-circle">3</div>
+          <div class="step-line"></div>
+          <div class="step-circle">4</div>
+        </div>
+        <div class="stepper-label">ESTACIÓN 01 · CASTING</div>
+      </div>
+      <div class="footer-tip">
+        <div class="bulb-icon">💡</div>
+        <div>
+          <div class="tip-title">TIP DEL DIRECTOR</div>
+          <small>Cada decisión que tomes construye tu historia.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

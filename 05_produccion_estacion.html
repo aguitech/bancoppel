@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estación 4 · Producción · Cine Financiero BanCoppel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .produccion-screen {
+      background: var(--negro);
+      border: 4px solid var(--azul-bancoppel);
+      border-radius: var(--radius-md);
+      max-width: 900px; width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 8rem;
+      box-shadow: var(--shadow-lg), 0 0 60px rgba(255,199,44,0.4);
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .produccion-screen::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at center, rgba(255,199,44,0.1), transparent 70%);
+    }
+    .screen-frame {
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 32px; background: var(--amarillo);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1rem; color: var(--azul-oscuro);
+      font-weight: 900; font-size: 0.85rem; letter-spacing: 0.1em;
+    }
+    .micro-mac {
+      display: flex; align-items: center; gap: 1rem;
+      background: white; padding: 1rem 1.5rem;
+      border-radius: var(--radius-md); margin: 1rem auto;
+      max-width: 500px; box-shadow: var(--shadow-sm);
+    }
+    .mac-icon { font-size: 2.5rem; }
+    .produccion-info {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+      max-width: 800px; width: 100%; margin: 1.5rem auto;
+    }
+    .info-tile {
+      background: white; border-radius: var(--radius-md);
+      padding: 1.5rem; border: 1px solid var(--gris-claro);
+    }
+  </style>
+</head>
+<body>
+  <div class="kiosk">
+    <header class="header">
+      <div class="header-logos">
+        <div class="logo-bancoppel">BanCoppel</div>
+        <div class="logo-afore">Afore Coppel</div>
+      </div>
+      <div class="accion-estacion">
+        <span class="icon">⭐</span>
+        <span>ESTACIÓN<br>04 DE 04</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="badge-escena">🎬 ESTACIÓN 04 · PRODUCCIÓN</div>
+
+      <h1 class="titulo-principal">
+        TU PELÍCULA ESTÁ<br>
+        <span class="yellow">CASI LISTA</span>
+      </h1>
+      <div style="width: 80px; height: 3px; background: var(--amarillo); margin: 0 auto 1.5rem;"></div>
+
+      <p class="subtitulo">
+        Visualiza tu película en la pantalla 80"<br>
+        antes de tomar las decisiones finales.
+      </p>
+
+      <div class="produccion-screen">
+        <div class="screen-frame">
+          <span>🎬 PREVIEW</span>
+          <span>80"</span>
+        </div>
+        🎥
+      </div>
+
+      <div class="micro-mac">
+        <span class="mac-icon">💻</span>
+        <div>
+          <p style="font-weight: 900; color: var(--azul-oscuro); font-size: 0.95rem;">RENDERIZANDO EN MAC MINI</p>
+          <p style="font-size: 0.8rem; color: var(--gris-oscuro);">Tu escena se está procesando...</p>
+        </div>
+      </div>
+
+      <div class="produccion-info">
+        <div class="info-tile">
+          <div style="font-size: 1.8rem;">⏱</div>
+          <p style="font-weight: 800; color: var(--azul-oscuro); margin-top: 0.5rem;">DURACIÓN</p>
+          <p style="color: var(--gris-oscuro); font-size: 0.95rem;">15-30 segundos</p>
+        </div>
+        <div class="info-tile">
+          <div style="font-size: 1.8rem;">📺</div>
+          <p style="font-weight: 800; color: var(--azul-oscuro); margin-top: 0.5rem;">CALIDAD</p>
+          <p style="color: var(--gris-oscuro); font-size: 0.95rem;">HD · 1080p</p>
+        </div>
+      </div>
+
+      <a href="06_decision1.html" class="btn btn-primary btn-arrow mt-3">CONTINUAR A DECISIONES</a>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <div class="shield-icon">🛡</div>
+        <div>Tu información está protegida.<br><small>Consulta nuestro Aviso de privacidad.</small></div>
+      </div>
+      <div class="stepper">
+        <div class="stepper-circles">
+          <div class="step-circle done">1</div>
+          <div class="step-line done"></div>
+          <div class="step-circle done">2</div>
+          <div class="step-line done"></div>
+          <div class="step-circle done">3</div>
+          <div class="step-line done"></div>
+          <div class="step-circle active">4</div>
+        </div>
+        <div class="stepper-label">ESTACIÓN 04 · PRODUCCIÓN</div>
+      </div>
+      <div class="footer-tip">
+        <div class="bulb-icon">💡</div>
+        <div>
+          <div class="tip-title">TIP DEL DIRECTOR</div>
+          <small>Tu historia está casi lista para el estreno.</small>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
